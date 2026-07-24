@@ -487,8 +487,6 @@ The workflow:
 
 - Actual closing price
 - Predicted closing price
-- Prediction error
-
 
 <p align="center">
 <img src="images/predictions_2026.png" width="800">
