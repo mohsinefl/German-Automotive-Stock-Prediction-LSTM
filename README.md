@@ -160,10 +160,10 @@ The dataset contains:
 Data Collection
         |
         ↓
-Data Cleaning
-        |
-        ↓
-Exploratory Data Analysis
+Data Cleaning ◄────────────────┐
+        |                      |
+        ↓                      |
+Exploratory Data Analysis ─────┘
         |
         ↓
 Feature Engineering
