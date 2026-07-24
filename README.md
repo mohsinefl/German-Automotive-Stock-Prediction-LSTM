@@ -542,6 +542,10 @@ The workflow:
 German-Automotive-Stock-Prediction-LSTM/
 
 │
+├── docs/
+│   ├── Project_Poster.pdf
+│   └── Project_Report.pdf
+│
 ├── notebooks/
 │   └── German_Automotive_Stock_Prediction_LSTM.ipynb
 │
