@@ -7,7 +7,7 @@
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-Deep%20Learning-orange)
 ![Machine Learning](https://img.shields.io/badge/Machine-Learning-green)
 ![Time Series](https://img.shields.io/badge/Task-Time%20Series%20Forecasting-purple)
-
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 # Introduction
 
