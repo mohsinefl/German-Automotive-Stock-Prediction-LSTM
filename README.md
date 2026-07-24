@@ -71,7 +71,6 @@ Historical stock market data was collected using the **Yahoo Finance API**.
 
 ## Historical Period
 
-```
 
 <table border="1" class="dataframe">
   <thead>
@@ -144,9 +143,6 @@ Historical stock market data was collected using the **Yahoo Finance API**.
 </table>
 </div>
 
-```
-
-
 The dataset contains:
 
 - Open price
@@ -158,8 +154,6 @@ The dataset contains:
 
 
 For final model validation:
-
-```
 
 <table border="1" class="dataframe">
   <thead>
@@ -247,7 +241,6 @@ For final model validation:
 </div>
 
 
-```
 
 completely unseen BMW stock data was used.
 
