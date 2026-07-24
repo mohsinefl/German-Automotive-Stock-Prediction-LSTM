@@ -149,106 +149,12 @@ The dataset contains:
 - High price
 - Low price
 - Closing price
-- Adjusted closing price
 - Trading volume
-
-
-For final model validation:
-
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Date</th>
-      <th>Actual Close</th>
-      <th>Predicted Close</th>
-      <th>Absolute Error</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2026-02-06</td>
-      <td>83.617996</td>
-      <td>84.363930</td>
-      <td>0.745934</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2026-02-09</td>
-      <td>83.428894</td>
-      <td>85.404518</td>
-      <td>1.975624</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2026-02-10</td>
-      <td>84.412193</td>
-      <td>85.388634</td>
-      <td>0.976440</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2026-02-11</td>
-      <td>84.582375</td>
-      <td>85.083618</td>
-      <td>0.501244</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2026-02-12</td>
-      <td>82.937248</td>
-      <td>84.519783</td>
-      <td>1.582535</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>2026-02-13</td>
-      <td>84.052910</td>
-      <td>83.465164</td>
-      <td>0.587746</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>2026-02-16</td>
-      <td>84.601288</td>
-      <td>83.596436</td>
-      <td>1.004852</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>2026-02-17</td>
-      <td>85.622398</td>
-      <td>84.419838</td>
-      <td>1.202560</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>2026-02-18</td>
-      <td>86.794800</td>
-      <td>85.161987</td>
-      <td>1.632812</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>2026-02-19</td>
-      <td>85.168579</td>
-      <td>85.838387</td>
-      <td>0.669807</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-completely unseen BMW stock data was used.
 
 
 ---
 
 # Project Workflow
-
 
 ```
 Data Collection
@@ -458,52 +364,9 @@ Validation consists of the last 30 observations before unseen 2026 data.
 
 The model uses a stacked LSTM architecture:
 
-
-```
-Input Sequence
-
-(60 days × features)
-
-        ↓
-
-LSTM Layer
-64 Units
-return_sequences=True
-
-        ↓
-
-Dropout
-0.3
-
-        ↓
-
-LSTM Layer
-64 Units
-return_sequences=True
-
-        ↓
-
-Dropout
-0.3
-
-        ↓
-
-LSTM Layer
-64 Units
-
-        ↓
-
-Dropout
-0.3
-
-        ↓
-
-Dense Layer
-
-        ↓
-
-Predicted Closing Price
-```
+<p align="center">
+<img src="images/architecture.png" width="800">
+</p>
 
 
 ## Model Configuration
@@ -585,9 +448,9 @@ The prediction curves show that the LSTM model can capture general market trends
 
 Example:
 
-```
-images/prediction_vs_actual.png
-```
+<p align="center">
+<img src="images/prediction_vs_actual.png" width="800">
+</p>
 
 
 ---
@@ -597,12 +460,6 @@ images/prediction_vs_actual.png
 
 A final validation experiment was performed using completely unseen BMW stock data.
 
-
-Period:
-
-```
-01.01.2026 - Present
-```
 
 
 The workflow:
@@ -633,20 +490,9 @@ The workflow:
 - Prediction error
 
 
-Results are stored as:
-
-
-```
-results/predictions_2026.csv
-```
-
-
-Example:
-
-
-| Date | Actual Close | Predicted Close | Error |
-|-|-|-|-|
-|2026-01-02|XX.XX|XX.XX|XX.XX|
+<p align="center">
+<img src="images/predictions_2026.png" width="800">
+</p>
 
 
 ---
@@ -703,11 +549,8 @@ German-Automotive-Stock-Prediction-LSTM/
 │
 ├── images/
 │   ├── architecture.png
-│   ├── training_history.png
-│   └── prediction_vs_actual.png
-│
-├── results/
-│   └── predictions_2026.csv
+│   ├── prediction_vs_actual.png
+│   └── predictions_2026.png
 │
 ├── requirements.txt
 ├── README.md
